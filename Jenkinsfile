@@ -1,5 +1,10 @@
 pipeline {
     agent { label 'worker' }
+    
+    tools {
+        jdk 'Java 17'
+        maven 'Maven 3.8.9'
+    }
 
     environment {
         WAR_NAME = 'sample-webapp.war'
